@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { typewriterEffect } from '../utils/animations';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [typewriterComplete, setTypewriterComplete] = useState(false);
+  const logoTextRef = useRef(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -19,6 +22,14 @@ const Navbar = () => {
     setMobileMenuOpen(false);
   }, [location]);
 
+  useEffect(() => {
+    if (logoTextRef.current && !typewriterComplete) {
+      typewriterEffect(logoTextRef.current, 'CS foreach', 150, () => {
+        setTypewriterComplete(true);
+      });
+    }
+  }, [typewriterComplete]);
+
   const isActive = (path) => {
     return location.pathname === path;
   };
@@ -27,8 +38,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <Link to="/" className="logo">
-          <span>💻</span>
-          CS for Each
+          <span ref={logoTextRef} style={{ color: 'var(--primary-blue)' }}></span>
         </Link>
         
         <button 
@@ -39,11 +49,12 @@ const Navbar = () => {
         </button>
 
         <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
-          <li><Link to="/about" className={isActive('/about') ? 'active-link' : ''}>About</Link></li>
-          <li><Link to="/programs" className={isActive('/programs') ? 'active-link' : ''}>Programs</Link></li>
-          <li><Link to="/team" className={isActive('/team') ? 'active-link' : ''}>Team</Link></li>
-          <li><Link to="/resources" className={isActive('/resources') ? 'active-link' : ''}>Resources</Link></li>
-          <li><Link to="/contact" className="cta-button">Get Involved</Link></li>
+          <li><Link to="/" className={isActive('/') ? 'active-link' : ''}>HOME</Link></li>
+          <li><Link to="/about" className={isActive('/about') ? 'active-link' : ''}>ABOUT</Link></li>
+          <li><Link to="/programs" className={isActive('/programs') ? 'active-link' : ''}>PROGRAMS</Link></li>
+          <li><Link to="/team" className={isActive('/team') ? 'active-link' : ''}>TEAM</Link></li>
+          <li><Link to="/partners" className={isActive('/partners') ? 'active-link' : ''}>PARTNERS</Link></li>
+          <li><Link to="/get-involved" className={`cta-button ${isActive('/get-involved') ? 'active-link' : ''}`}>GET INVOLVED</Link></li>
         </ul>
       </div>
     </nav>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ContactPage = () => {
+const GetInvolvedPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -37,149 +37,142 @@ const ContactPage = () => {
 
   return (
     <div className="page-content">
-      <div className="page-header">
-        <h1>Get in Touch</h1>
-        <p>Have questions? Want to get involved? We'd love to hear from you!</p>
-      </div>
+      {/* Hero Section */}
+      <section className="hero-section scroll-reveal" style={{ padding: '4rem 2rem', textAlign: 'center' }}>
+        <h1 className="hero-title">
+          GET INVOLVED
+        </h1>
+        <p className="hero-description">
+          Join us in making computer science education accessible to all students
+        </p>
+      </section>
 
-      <section className="section">
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: window.innerWidth > 968 ? '1fr 1fr' : '1fr',
-          gap: '4rem',
-          maxWidth: '1200px',
-          margin: '0 auto'
-        }}>
-          <div>
-            <h2 style={{ 
-              fontSize: '2rem', 
-              color: 'var(--dark-blue)', 
-              marginBottom: '1.5rem' 
-            }}>
+      {/* How Can I Get Involved Section */}
+      <section className="section scroll-reveal">
+        <h2 className="section-title">
+          HOW CAN I GET INVOLVED?
+        </h2>
+        <div className="get-involved-grid">
+          {/* For UCSD Students */}
+          <div className="involved-card scroll-reveal">
+            <img 
+              src="https://via.placeholder.com/360x440/E8F4FD/4A90E2?text=UCSD+Students"
+              alt="For UCSD Students"
+              className="involved-image"
+            />
+            <h3 className="involved-title">
+              FOR UCSD STUDENTS
+            </h3>
+            <p className="involved-description">
+              If you are a current UCSD student and you'd like to be involved, join our Discord for the most updated information! We also hold general body meetings (GBMs) every quarter where you can learn about what we're currently doing!
+            </p>
+            <a 
+              href="https://discord.gg/zQRdJJxh2m"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              JOIN OUR DISCORD
+            </a>
+          </div>
+
+          {/* For Educators */}
+          <div className="involved-card scroll-reveal">
+            <img 
+              src="https://via.placeholder.com/360x440/E8F4FD/4A90E2?text=Educators"
+              alt="For Educators"
+              className="involved-image"
+            />
+            <h3 className="involved-title">
+              FOR EDUCATORS
+            </h3>
+            <p className="involved-description">
+              If you are an educator and you'd like to be involved with our organization, email us at{' '}
+              <a href="mailto:csforeach@ucsd.edu" style={{ color: 'var(--primary-blue)' }}>
+                csforeach@ucsd.edu
+              </a>
+              {' '}or fill out our contact form and we will follow up with you!
+            </p>
+            <a 
+              href="https://tinyurl.com/3hjmjyhc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              CONTACT FORM
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="section scroll-reveal" style={{ background: 'var(--light-gray)' }}>
+        <h2 className="section-title">Get in Touch</h2>
+        <p className="section-subtitle">
+          Have questions or want to get involved? Send us a message and we'll get back to you soon!
+        </p>
+
+        <div className="two-column-grid">
+          <div className="scroll-reveal">
+            <h3 style={{ fontSize: '1.8rem', color: 'var(--dark-blue)', marginBottom: '1.5rem' }}>
               Contact Information
-            </h2>
+            </h3>
             
             <div style={{ marginBottom: '2rem' }}>
-              <div style={{ 
-                display: 'flex', 
-                alignItems: 'center', 
-                gap: '1rem',
-                marginBottom: '1rem',
-                padding: '1rem',
-                background: 'var(--light-blue)',
-                borderRadius: '10px'
-              }}>
+              <div className="contact-info-box">
                 <span style={{ fontSize: '2rem' }}>📧</span>
                 <div>
                   <h4 style={{ color: 'var(--dark-blue)', marginBottom: '0.25rem' }}>
                     Email
                   </h4>
-                  <a href="mailto:contact@csforeach.org" style={{ 
-                    color: 'var(--primary-blue)',
-                    textDecoration: 'none'
-                  }}>
-                    contact@csforeach.org
+                  <a href="mailto:csforeach@ucsd.edu" style={{ color: 'var(--primary-blue)', textDecoration: 'none' }}>
+                    csforeach@ucsd.edu
                   </a>
                 </div>
               </div>
 
-              <div style={{ 
-                display: 'flex', 
-                alignItems: 'center', 
-                gap: '1rem',
-                marginBottom: '1rem',
-                padding: '1rem',
-                background: 'var(--light-blue)',
-                borderRadius: '10px'
-              }}>
+              <div className="contact-info-box">
                 <span style={{ fontSize: '2rem' }}>📱</span>
                 <div>
                   <h4 style={{ color: 'var(--dark-blue)', marginBottom: '0.25rem' }}>
-                    Phone
+                    Discord
                   </h4>
-                  <a href="tel:+15551234567" style={{ 
-                    color: 'var(--primary-blue)',
-                    textDecoration: 'none'
-                  }}>
-                    (555) 123-4567
+                  <a href="https://discord.gg/zQRdJJxh2m" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-blue)', textDecoration: 'none' }}>
+                    Join our Discord server
                   </a>
                 </div>
               </div>
 
-              <div style={{ 
-                display: 'flex', 
-                alignItems: 'center', 
-                gap: '1rem',
-                marginBottom: '1rem',
-                padding: '1rem',
-                background: 'var(--light-blue)',
-                borderRadius: '10px'
-              }}>
+              <div className="contact-info-box">
                 <span style={{ fontSize: '2rem' }}>📍</span>
                 <div>
                   <h4 style={{ color: 'var(--dark-blue)', marginBottom: '0.25rem' }}>
-                    Address
+                    Location
                   </h4>
                   <p style={{ color: 'var(--medium-gray)', margin: 0 }}>
-                    123 Education Lane<br />
-                    Tech City, TC 12345
+                    UC San Diego<br />
+                    La Jolla, CA 92093
                   </p>
                 </div>
               </div>
             </div>
 
-            <h3 style={{ 
-              fontSize: '1.5rem', 
-              color: 'var(--dark-blue)', 
-              marginBottom: '1rem',
-              marginTop: '2rem'
-            }}>
-              Office Hours
-            </h3>
-            <div style={{ 
-              background: 'var(--white)',
-              padding: '1.5rem',
-              borderRadius: '10px',
-              boxShadow: '0 3px 15px rgba(0, 0, 0, 0.08)'
-            }}>
-              <p style={{ color: 'var(--medium-gray)', marginBottom: '0.5rem' }}>
-                <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM
-              </p>
-              <p style={{ color: 'var(--medium-gray)', marginBottom: '0.5rem' }}>
-                <strong>Saturday:</strong> 10:00 AM - 4:00 PM
-              </p>
-              <p style={{ color: 'var(--medium-gray)' }}>
-                <strong>Sunday:</strong> Closed
-              </p>
-            </div>
-
-            <h3 style={{ 
-              fontSize: '1.5rem', 
-              color: 'var(--dark-blue)', 
-              marginBottom: '1rem',
-              marginTop: '2rem'
-            }}>
+            <h3 style={{ fontSize: '1.5rem', color: 'var(--dark-blue)', marginBottom: '1rem', marginTop: '2rem' }}>
               Follow Us
             </h3>
             <div style={{ display: 'flex', gap: '1rem' }}>
               {[
                 { icon: '🐦', name: 'Twitter', link: 'https://twitter.com' },
                 { icon: '📘', name: 'Facebook', link: 'https://facebook.com' },
-                { icon: '📷', name: 'Instagram', link: 'https://instagram.com' },
-                { icon: '💼', name: 'LinkedIn', link: 'https://linkedin.com' }
+                { icon: '📷', name: 'Instagram', link: 'https://www.instagram.com/csforeach/' },
+                { icon: '💼', name: 'LinkedIn', link: 'https://www.linkedin.com/company/csforeach/' }
               ].map((social, index) => (
                 <a 
                   key={index}
                   href={social.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{
-                    fontSize: '2rem',
-                    textDecoration: 'none',
-                    transition: 'transform 0.3s ease'
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.2)'}
-                  onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                  className="social-icon-hover"
                   title={social.name}
                 >
                   {social.icon}
@@ -188,28 +181,14 @@ const ContactPage = () => {
             </div>
           </div>
 
-          <div>
-            <h2 style={{ 
-              fontSize: '2rem', 
-              color: 'var(--dark-blue)', 
-              marginBottom: '1.5rem' 
-            }}>
+          <div className="scroll-reveal">
+            <h3 style={{ fontSize: '1.8rem', color: 'var(--dark-blue)', marginBottom: '1.5rem' }}>
               Send Us a Message
-            </h2>
+            </h3>
 
-            <div style={{
-              background: 'var(--white)',
-              padding: '2.5rem',
-              borderRadius: '15px',
-              boxShadow: '0 5px 20px rgba(0, 0, 0, 0.08)'
-            }}>
+            <div className="contact-form-box">
               {submitted ? (
-                <div style={{ 
-                  textAlign: 'center', 
-                  padding: '3rem',
-                  color: 'var(--primary-blue)',
-                  fontSize: '1.2rem'
-                }}>
+                <div className="form-success">
                   <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>✓</div>
                   <p>Thank you for reaching out! We'll get back to you soon.</p>
                 </div>
@@ -222,22 +201,15 @@ const ContactPage = () => {
                       name="interest"
                       value={formData.interest}
                       onChange={handleChange}
-                      style={{
-                        width: '100%',
-                        padding: '0.8rem',
-                        border: '2px solid #E0E0E0',
-                        borderRadius: '8px',
-                        fontSize: '1rem',
-                        fontFamily: 'inherit'
-                      }}
+                      className="form-select"
                       required
                     >
                       <option value="general">General Inquiry</option>
-                      <option value="student">Enrolling as a Student</option>
+                      <option value="student">Joining as a Student</option>
                       <option value="volunteer">Volunteering</option>
                       <option value="mentor">Becoming a Mentor</option>
                       <option value="partner">School Partnership</option>
-                      <option value="donate">Donations & Sponsorship</option>
+                      <option value="sponsor">Sponsorship</option>
                     </select>
                   </div>
 
@@ -249,6 +221,7 @@ const ContactPage = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
+                      className="form-input"
                       required
                     />
                   </div>
@@ -261,6 +234,7 @@ const ContactPage = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
+                      className="form-input"
                       required
                     />
                   </div>
@@ -273,6 +247,7 @@ const ContactPage = () => {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
+                      className="form-input"
                       required
                     />
                   </div>
@@ -284,6 +259,7 @@ const ContactPage = () => {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
+                      className="form-textarea"
                       required
                     />
                   </div>
@@ -298,15 +274,11 @@ const ContactPage = () => {
         </div>
       </section>
 
-      <section className="section" style={{ background: 'var(--light-gray)' }}>
+      {/* FAQ Section */}
+      <section className="section scroll-reveal">
         <h2 className="section-title">Frequently Asked Questions</h2>
         
-        <div style={{ 
-          maxWidth: '800px', 
-          margin: '0 auto',
-          display: 'grid',
-          gap: '1.5rem'
-        }}>
+        <div className="faq-container">
           {[
             {
               q: 'Are your programs really free?',
@@ -314,7 +286,7 @@ const ContactPage = () => {
             },
             {
               q: 'What age groups do you serve?',
-              a: 'We primarily serve middle and high school students (ages 11-18), but some programs are open to college students and adult learners.'
+              a: 'We primarily work with K-12 students in the San Diego area, with a focus on traditionally underserved communities.'
             },
             {
               q: 'Do I need prior coding experience?',
@@ -322,27 +294,18 @@ const ContactPage = () => {
             },
             {
               q: 'How do I sign up for a program?',
-              a: 'Fill out the contact form above selecting your area of interest, or email us directly at contact@csforeach.org.'
+              a: 'Fill out the contact form above or email us directly at csforeach@ucsd.edu with your interest!'
             },
             {
-              q: 'Can my school partner with CS for Each?',
+              q: 'Can my school partner with CS foreach?',
               a: 'Absolutely! We love working with schools. Contact us to discuss how we can support your CS education goals.'
             }
           ].map((faq, index) => (
-            <div key={index} style={{
-              background: 'var(--white)',
-              padding: '1.5rem',
-              borderRadius: '10px',
-              boxShadow: '0 3px 15px rgba(0, 0, 0, 0.08)'
-            }}>
-              <h3 style={{ 
-                color: 'var(--primary-blue)', 
-                marginBottom: '0.8rem',
-                fontSize: '1.2rem'
-              }}>
+            <div key={index} className="faq-item scroll-reveal">
+              <h3 className="faq-question">
                 {faq.q}
               </h3>
-              <p style={{ color: 'var(--medium-gray)', lineHeight: '1.7' }}>
+              <p className="faq-answer">
                 {faq.a}
               </p>
             </div>
@@ -353,4 +316,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default GetInvolvedPage;

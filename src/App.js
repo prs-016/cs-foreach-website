@@ -6,8 +6,8 @@ import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
 import ProgramsPage from './pages/ProgramsPage';
 import TeamPage from './pages/TeamPage';
-import ResourcesPage from './pages/ResourcesPage';
-import ContactPage from './pages/ContactPage';
+import PartnersPage from './pages/PartnersPage';
+import GetInvolvedPage from './pages/GetInvolvedPage';
 import './styles/main.css';
 
 function App() {
@@ -20,8 +20,8 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/programs" element={<ProgramsPage />} />
           <Route path="/team" element={<TeamPage />} />
-          <Route path="/resources" element={<ResourcesPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/partners" element={<PartnersPage />} />
+          <Route path="/get-involved" element={<GetInvolvedPage />} />
         </Routes>
         <Footer />
       </div>

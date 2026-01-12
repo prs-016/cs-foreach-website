@@ -2,58 +2,52 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="footer">
-      <div className="footer-content">
-        <div className="footer-section">
-          <h3>CS for Each</h3>
-          <p>Empowering every student through accessible computer science education.</p>
-          <div className="social-links">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">🐦</a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">📘</a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">📷</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">💼</a>
+      <div className="footer-content-wrapper">
+        <div className="footer-left">
+          <Link to="/">
+            <img 
+              src="https://via.placeholder.com/166x40/FFFFFF/4A90E2?text=CS+foreach" 
+              alt="CS foreach logo"
+              className="footer-logo"
+            />
+          </Link>
+          <div className="footer-nav-links">
+            <Link to="/">HOME</Link>
+            <Link to="/about">ABOUT</Link>
+            <Link to="/programs">PROGRAMS</Link>
+            <Link to="/team">TEAM</Link>
+            <Link to="/partners">PARTNERS</Link>
           </div>
         </div>
 
-        <div className="footer-section">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/programs">Programs</Link></li>
-            <li><Link to="/team">Our Team</Link></li>
-            <li><Link to="/resources">Resources</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
+        <div className="footer-center">
+          <a 
+            href="http://eepurl.com/ik8qiv" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="newsletter-link"
+          >
+            Sign up for our weekly newsletter!
+          </a>
+          <p className="copyright">© 2024 by CS foreach</p>
         </div>
 
-        <div className="footer-section">
-          <h3>Programs</h3>
-          <ul>
-            <li><Link to="/programs">Coding Workshops</Link></li>
-            <li><Link to="/programs">School Partnerships</Link></li>
-            <li><Link to="/programs">Mentorship</Link></li>
-            <li><Link to="/programs">Hackathons</Link></li>
-            <li><Link to="/programs">Career Prep</Link></li>
-          </ul>
+        <div className="footer-social">
+          <a href="https://discord.gg/zQRdJJxh2m" target="_blank" rel="noopener noreferrer">
+            <img src="https://via.placeholder.com/39x40/5865F2/FFFFFF?text=D" alt="Discord" />
+          </a>
+          <a href="https://www.instagram.com/csforeach/" target="_blank" rel="noopener noreferrer">
+            <img src="https://via.placeholder.com/39x40/E4405F/FFFFFF?text=I" alt="Instagram" />
+          </a>
+          <a href="https://www.linkedin.com/company/csforeach/" target="_blank" rel="noopener noreferrer">
+            <img src="https://via.placeholder.com/39x40/0077B5/FFFFFF?text=L" alt="LinkedIn" />
+          </a>
+          <a href="mailto:csforeach@ucsd.edu">
+            <img src="https://via.placeholder.com/39x40/EA4335/FFFFFF?text=E" alt="Email" />
+          </a>
         </div>
-
-        <div className="footer-section">
-          <h3>Get Involved</h3>
-          <ul>
-            <li><Link to="/contact">Become a Mentor</Link></li>
-            <li><Link to="/contact">Volunteer</Link></li>
-            <li><Link to="/contact">Partner With Us</Link></li>
-            <li><Link to="/contact">Donate</Link></li>
-            <li><Link to="/contact">Join Our Team</Link></li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="footer-bottom">
-        <p>&copy; {currentYear} CS for Each. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
       </div>
     </footer>
   );
