@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { initScrollReveal } from '../utils/animations';
 
 const GetInvolvedPage = () => {
   const [formData, setFormData] = useState({
@@ -34,6 +35,11 @@ const GetInvolvedPage = () => {
       setSubmitted(false);
     }, 3000);
   };
+
+  useEffect(() => {
+    const cleanup = initScrollReveal();
+    return cleanup;
+  }, []);
 
   return (
     <div className="page-content">
@@ -160,14 +166,13 @@ const GetInvolvedPage = () => {
             <h3 style={{ fontSize: '1.5rem', color: 'var(--dark-blue)', marginBottom: '1rem', marginTop: '2rem' }}>
               Follow Us
             </h3>
-            <div style={{ display: 'flex', gap: '1rem' }}>
+            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
               {[
-                { icon: '🐦', name: 'Twitter', link: 'https://twitter.com' },
-                { icon: '📘', name: 'Facebook', link: 'https://facebook.com' },
-                { icon: '📷', name: 'Instagram', link: 'https://www.instagram.com/csforeach/' },
-                { icon: '💼', name: 'LinkedIn', link: 'https://www.linkedin.com/company/csforeach/' }
+                { img: 'https://via.placeholder.com/64x64/1DA1F2/FFFFFF?text=TW', name: 'Twitter', link: 'https://twitter.com' },
+                { img: 'https://via.placeholder.com/64x64/E1306C/FFFFFF?text=IG', name: 'Instagram', link: 'https://www.instagram.com/csforeach/' },
+                { img: 'https://via.placeholder.com/64x64/0077B5/FFFFFF?text=IN', name: 'LinkedIn', link: 'https://www.linkedin.com/company/csforeach/' }
               ].map((social, index) => (
-                <a 
+                <a
                   key={index}
                   href={social.link}
                   target="_blank"
@@ -175,7 +180,7 @@ const GetInvolvedPage = () => {
                   className="social-icon-hover"
                   title={social.name}
                 >
-                  {social.icon}
+                  <img src={social.img} alt={social.name} className="social-icon-img" />
                 </a>
               ))}
             </div>
@@ -280,10 +285,6 @@ const GetInvolvedPage = () => {
         
         <div className="faq-container">
           {[
-            {
-              q: 'Are your programs really free?',
-              a: 'Yes! All our programs are 100% free for students. We\'re funded through grants and donations to ensure cost is never a barrier to learning.'
-            },
             {
               q: 'What age groups do you serve?',
               a: 'We primarily work with K-12 students in the San Diego area, with a focus on traditionally underserved communities.'

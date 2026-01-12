@@ -23,12 +23,31 @@ const Navbar = () => {
   }, [location]);
 
   useEffect(() => {
-    if (logoTextRef.current && !typewriterComplete) {
-      typewriterEffect(logoTextRef.current, 'CS foreach', 150, () => {
+    // Retrigger logo typing each time location changes (navigation/reload)
+    let cancel;
+    if (logoTextRef.current) {
+      // cancel any previous run (if present)
+      if (typeof logoTextRef.current.__typewriterCancel === 'function') {
+        logoTextRef.current.__typewriterCancel();
+      }
+
+      // clear text and flags so animation starts clean
+      logoTextRef.current.textContent = '';
+      logoTextRef.current.dataset.typed = 'false';
+      logoTextRef.current.dataset.typing = 'false';
+      setTypewriterComplete(false);
+
+      cancel = typewriterEffect(logoTextRef.current, 'CS foreach', 180, () => {
         setTypewriterComplete(true);
       });
+      // store cancel on the element for other callers
+      if (logoTextRef.current) logoTextRef.current.__typewriterCancel = cancel;
     }
-  }, [typewriterComplete]);
+
+    return () => {
+      if (typeof cancel === 'function') cancel();
+    };
+  }, [location]);
 
   const isActive = (path) => {
     return location.pathname === path;

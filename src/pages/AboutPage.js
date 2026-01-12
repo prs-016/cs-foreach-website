@@ -53,7 +53,7 @@ const AboutPage = () => {
         <h2 className="section-title">
           UPCOMING EVENTS
         </h2>
-        {/* Events content would go here if available */}
+        {/* TODO: ADD CALENDAR THROUGH API IG idk check csforeach website*/}
       </section>
     </div>
   );

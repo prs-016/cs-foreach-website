@@ -23,19 +23,21 @@ const Footer = () => {
         </div>
 
         <div className="footer-center">
+            {/* TODO: update line for newsletter */}
           <a 
-            href="http://eepurl.com/ik8qiv" 
+            href="" 
             target="_blank" 
             rel="noopener noreferrer"
             className="newsletter-link"
           >
             Sign up for our weekly newsletter!
           </a>
-          <p className="copyright">© 2024 by CS foreach</p>
+          <p className="copyright">© 2026 by CS foreach</p>
         </div>
 
         <div className="footer-social">
-          <a href="https://discord.gg/zQRdJJxh2m" target="_blank" rel="noopener noreferrer">
+          <a href="https://discord.com/invite/zQRdJJxh2m" target="_blank" rel="noopener noreferrer">
+          {/* TODO: copied last years need to update if link dosent work */}
             <img src="https://via.placeholder.com/39x40/5865F2/FFFFFF?text=D" alt="Discord" />
           </a>
           <a href="https://www.instagram.com/csforeach/" target="_blank" rel="noopener noreferrer">

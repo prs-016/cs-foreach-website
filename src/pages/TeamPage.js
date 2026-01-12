@@ -9,18 +9,18 @@ const TeamPage = () => {
   }, []);
 
   const teamMembers = [
-    { name: 'Matthew Peng', role: 'President', image: 'https://via.placeholder.com/124x123/4A90E2/FFFFFF?text=MP' },
-    { name: 'Karan Narula', role: 'Co-Director of Curriculum', image: 'https://via.placeholder.com/124x123/4A90E2/FFFFFF?text=KN' },
-    { name: 'Kate Romero', role: 'VP External', image: 'https://via.placeholder.com/124x123/4A90E2/FFFFFF?text=KR' },
-    { name: 'Sudhir Vasudevan', role: 'Co-Director of Curriculum', image: 'https://via.placeholder.com/124x123/4A90E2/FFFFFF?text=SV' },
-    { name: 'Jacob Paulson', role: 'VP Internal', image: 'https://via.placeholder.com/124x123/4A90E2/FFFFFF?text=JP' },
-    { name: 'Brian Lu', role: 'Director of TritonHacks', image: 'https://via.placeholder.com/124x123/4A90E2/FFFFFF?text=BL' },
-    { name: 'Abhay Anand', role: 'VP Finance', image: 'https://via.placeholder.com/124x123/4A90E2/FFFFFF?text=AA' },
-    { name: 'Yuliana Chavez', role: 'Co-Director of Early Start', image: 'https://via.placeholder.com/124x123/4A90E2/FFFFFF?text=YC' },
-    { name: 'Kenneth Nguyen', role: 'Co-Director of Early Start', image: 'https://via.placeholder.com/124x123/CCCCCC/666666?text=KN' },
-    { name: 'Om Rabadia', role: 'Co-Director of Design', image: 'https://via.placeholder.com/124x123/CCCCCC/666666?text=OR' },
-    { name: 'Anna Hoang', role: 'Co-Director of Design', image: 'https://via.placeholder.com/124x123/CCCCCC/666666?text=AH' },
-    { name: 'Keerthi Nalabotu', role: 'Head of Engagement', image: 'https://via.placeholder.com/124x123/CCCCCC/666666?text=KN' }
+    { name: 'Person 1', role: 'President', image: 'https://via.placeholder.com/124x123/4A90E2/FFFFFF?text=MP' },
+    { name: 'Person 2', role: 'Co-Director of Curriculum', image: 'https://via.placeholder.com/124x123/4A90E2/FFFFFF?text=KN' },
+    { name: 'Person 3', role: 'VP External', image: 'https://via.placeholder.com/124x123/4A90E2/FFFFFF?text=KR' },
+    { name: 'Person 4', role: 'Co-Director of Curriculum', image: 'https://via.placeholder.com/124x123/4A90E2/FFFFFF?text=SV' },
+    { name: 'Person 5', role: 'VP Internal', image: 'https://via.placeholder.com/124x123/4A90E2/FFFFFF?text=JP' },
+    { name: 'Person 6', role: 'Director of TritonHacks', image: 'https://via.placeholder.com/124x123/4A90E2/FFFFFF?text=BL' },
+    { name: 'Person 7', role: 'VP Finance', image: 'https://via.placeholder.com/124x123/4A90E2/FFFFFF?text=AA' },
+    { name: 'Person 8', role: 'Co-Director of Early Start', image: 'https://via.placeholder.com/124x123/4A90E2/FFFFFF?text=YC' },
+    { name: 'Person 9', role: 'Co-Director of Early Start', image: 'https://via.placeholder.com/124x123/CCCCCC/666666?text=KN' },
+    { name: 'Person 10', role: 'Co-Director of Design', image: 'https://via.placeholder.com/124x123/CCCCCC/666666?text=OR' },
+    { name: 'Person 11', role: 'Co-Director of Design', image: 'https://via.placeholder.com/124x123/CCCCCC/666666?text=AH' },
+    { name: 'Person 12', role: 'Head of Engagement', image: 'https://via.placeholder.com/124x123/CCCCCC/666666?text=KN' }
   ];
 
   return (

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { initScrollReveal, typewriterEffect } from '../utils/animations';
 
 const Home = () => {
+    // TODO: add dark mode
   const heroTitleRef = useRef(null);
   const [typewriterDone, setTypewriterDone] = useState(false);
 
@@ -15,9 +16,9 @@ const Home = () => {
   useEffect(() => {
     if (heroTitleRef.current && !typewriterDone) {
       typewriterEffect(
-        heroTitleRef.current, 
+        heroTitleRef.current,
         'Striving for Equity and Access in Computer Science Education',
-        50,
+        120,
         () => setTypewriterDone(true)
       );
     }
@@ -58,7 +59,7 @@ const Home = () => {
             <Link to="/get-involved" className="btn-primary">
               GET INVOLVED
             </Link>
-            <Link to="/partners" className="btn-primary">
+            <Link to="/partners#partners-contact" className="btn-primary">
               SCHEDULE A WORKSHOP
             </Link>
           </div>

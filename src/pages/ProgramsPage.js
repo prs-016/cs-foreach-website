@@ -35,16 +35,16 @@ const ProgramsPage = () => {
       projectGallery: 'https://tritonhacks23.devpost.com/project-gallery'
     },
     {
-      year: '2022',
+      year: '2024',
       image: 'https://via.placeholder.com/279x184/FF6B35/FFFFFF?text=TritonHacks+2022',
-      impactReport: 'https://github.com/tritonhacks/GitHub-Grant/blob/main/Tritonhacks-2022.md',
-      projectGallery: 'https://tritonhacks22.devpost.com/project-gallery'
+      impactReport: 'https://github.com/tritonhacks/TH24-Impact-Report/blob/main/README.md',
+      projectGallery: 'https://tritonhacks-2024.devpost.com/project-gallery?page=1'
     },
     {
-      year: '2021',
+      year: '2025',
       image: 'https://via.placeholder.com/279x184/FF6B35/FFFFFF?text=TritonHacks+2021',
-      impactReport: 'https://drive.google.com/file/d/1b2xqs0BwfMJdjbE3keA1vMEaJzY51K5F/view',
-      projectGallery: 'https://tritonhacks-2021.devpost.com/project-gallery'
+      impactReport: 'https://github.com/tritonhacks/TH25-Impact-Report/blob/main/README.md',
+      projectGallery: 'https://tritonhacks-2025.devpost.com/project-gallery'
     }
   ];
 
@@ -164,6 +164,7 @@ const ProgramsPage = () => {
         </div>
 
         {/* Past Workshops */}
+        {/* TODO: implement carousel here: link to react component we can just copy-https://levelup.gitconnected.com/implementing-an-infinite-autoplay-carousel-in-react-with-splide-cac6355ba435   go down to carousel games .jsx */}
         <div className="scroll-reveal" style={{ textAlign: 'center', marginTop: '4rem', marginBottom: '3rem' }}>
           <h3 className="section-title" style={{ fontSize: '2rem' }}>
             PAST WORKSHOPS
@@ -258,7 +259,7 @@ const ProgramsPage = () => {
         </h2>
         
         <p className="section-subtitle">
-          For longer-term projects, we offer a unique, 15 week opportunity for high school students to join a team of college students in an <a href="https://www.agilealliance.org/agile101/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-blue)' }}>AGILE environment</a>, working on a project of their choosing.
+          For longer-term projects, we offer a unique, 15 week opportunity for high school students to join a team of college students in an AGILE environment, working on a project of their choosing.
         </p>
 
         {/* Interest Form Section */}
@@ -286,7 +287,6 @@ const ProgramsPage = () => {
             COHORT PROJECTS SPRING 2022
           </h3>
         </div>
-
         <div className="cohort-grid">
           <div className="cohort-card scroll-reveal">
             <img 

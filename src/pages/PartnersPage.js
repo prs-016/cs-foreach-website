@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { initScrollReveal } from '../utils/animations';
 
 const PartnersPage = () => {
@@ -6,6 +7,19 @@ const PartnersPage = () => {
     const cleanup = initScrollReveal();
     return cleanup;
   }, []);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location && location.hash) {
+      const id = location.hash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        // small delay to allow layout/scroll-reveal to initialize
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
+      }
+    }
+  }, [location]);
 
   const schools = [
     'Montgomery High School',
@@ -25,8 +39,7 @@ const PartnersPage = () => {
     { name: 'IDEA Engineering', url: 'https://jacobsschool.ucsd.edu/idea', logo: 'https://via.placeholder.com/278x155/FFB81C/FFFFFF?text=IDEA' },
     { name: 'Google Cloud', url: 'https://cloud.google.com/', logo: 'https://via.placeholder.com/278x155/4285F4/FFFFFF?text=Google' },
     { name: 'NetApp', url: 'https://www.netapp.com/', logo: 'https://via.placeholder.com/278x155/0067C5/FFFFFF?text=NetApp' },
-    { name: 'Trace3', url: 'https://www.trace3.com/', logo: 'https://via.placeholder.com/278x155/00A4E4/FFFFFF?text=Trace3' },
-    { name: 'GitHub', url: '#', logo: 'https://via.placeholder.com/278x155/24292E/FFFFFF?text=GitHub' }
+    { name: 'Trace3', url: 'https://www.trace3.com/', logo: 'https://via.placeholder.com/278x155/00A4E4/FFFFFF?text=Trace3' }
   ];
 
   return (
@@ -122,8 +135,8 @@ const PartnersPage = () => {
         </div>
       </section>
 
-      {/* Interested in Working With Us Section */}
-      <section className="section scroll-reveal">
+      
+      <section id="partners-contact" className="section scroll-reveal">
         <div className="cta-box">
           <h2 className="cta-title">
             INTERESTED IN WORKING WITH US?
